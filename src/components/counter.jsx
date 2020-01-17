@@ -19,6 +19,7 @@ class Counter extends Component {
         >
           Increment
         </button>
+        asdfasdfasdf
       </div>
     );
   }
