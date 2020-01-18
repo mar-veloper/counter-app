@@ -20,7 +20,7 @@ class valueer extends Component {
           Increment
         </button>
         <button
-          onClick={this.handleDelete}
+          onClick={() => this.props.onDelete(this.props.id)}
           className="btn btn-danger btn-sm m-2"
         >
           Delete
