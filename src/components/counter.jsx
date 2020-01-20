@@ -13,23 +13,34 @@ class valueer extends Component {
   render() {
     console.log("Counter - Rendered");
 
-    const { onIncrement, onDelete, counter } = this.props;
+    const { onIncrement, onDecrement, onDelete, counter } = this.props;
 
     return (
-      <div>
-        <span className={this.getBadgeClasses()}>{this.formatvalue()}</span>
-        <button
-          onClick={() => onIncrement(counter)}
-          className="btn btn-secondary btn-sm"
-        >
-          Increment
-        </button>
-        <button
-          onClick={() => onDelete(counter.id)}
-          className="btn btn-danger btn-sm m-2"
-        >
-          Delete
-        </button>
+      <div className="row">
+        <div className="col-1">
+          <span className={this.getBadgeClasses()}>{this.formatvalue()}</span>
+        </div>
+        <div className="col">
+          <button
+            onClick={() => onIncrement(counter)}
+            className="btn btn-secondary btn-sm"
+          >
+            +
+          </button>
+          <button
+            onClick={() => onDecrement(counter)}
+            className="btn btn-secondary btn-sm m-2"
+            disabled={counter.value < 1}
+          >
+            -
+          </button>
+          <button
+            onClick={() => onDelete(counter.id)}
+            className="btn btn-danger btn-sm"
+          >
+            x
+          </button>
+        </div>
       </div>
     );
   }
