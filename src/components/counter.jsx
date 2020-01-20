@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 
 class valueer extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    console.log("prevProps", prevProps);
+    console.log("prevState", prevState);
+  }
+
+  componentWillUnmount() {
+    console.log("Counter - Unmounted");
+  }
+
   render() {
+    console.log("Counter - Rendered");
+
     const { onIncrement, onDelete, counter } = this.props;
 
     return (
