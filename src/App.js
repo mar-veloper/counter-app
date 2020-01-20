@@ -1,13 +1,19 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { Component } from "react";
+import NavBar from "./components/navbar";
+import Counters from "./components/counters";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar></NavBar>
+        <main className="container">
+          <Counters></Counters>
+        </main>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
