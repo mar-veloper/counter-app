@@ -1,5 +1,5 @@
 # Counter application
->This is only for learning purpose.
+>This is for learning and practice purpose.
 
 ## Available Scripts
 
