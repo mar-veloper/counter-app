@@ -1,5 +1,5 @@
 # Counter application
->This is for learning and practice purpose.
+>This is for learning and practice ReactJS.
 
 ## Available Scripts
 
